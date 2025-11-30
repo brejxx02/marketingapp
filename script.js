@@ -1,25 +1,24 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyDGhKiQ8S2TysYRphFyVY3lhFgYfI9Ju-U",
-  authDomain: "marketingapp-e5c7b.firebaseapp.com",
-  projectId: "marketingapp-e5c7b",
-  storageBucket: "brejxx02.appspot.com",
-  messagingSenderId: "476873162864",
-  appId: "1:476873162864:web:401b85d657a14480c574b5"
-};
+body {
+  text-align: center;
+  font-family: Arial;
+  padding: 30px;
+  background: #f7f7f7;
+}
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+button {
+  padding: 12px 25px;
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-// Join button function
-function joinNow() {
-  db.collection("users").add({
-    joinedAt: new Date().toISOString()
-  })
-  .then(() => {
-    alert("🎉 Successfully Joined!");
-  })
-  .catch((err) => {
-    alert("❌ Error: " + err.message);
-  });
+#welcome {
+  display: none;
+  margin-top: 20px;
+  font-size: 20px;
+  color: green;
+  font-weight: bold;
 }
